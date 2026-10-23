@@ -37,8 +37,8 @@ Built to make setting up a fresh Windows installation faster, reproducible, and 
 
 ## Wallpapers
 
-[2026-09-09 | Miku Blue Ocean Wallpaper - Alphacoders](https://wall.alphacoders.com/big.php?i=731812)
-[2026-10-23 | Rosuuri Serenity Showcase - Instagram](https://www.instagram.com/p/Daf9NJMjcDM/?img_index=4)
+- [2026-09-09 | Miku Blue Ocean Wallpaper - Alphacoders](https://wall.alphacoders.com/big.php?i=731812)
+- [2026-10-23 | Rosuuri Serenity Showcase - Instagram](https://www.instagram.com/p/Daf9NJMjcDM/?img_index=4)
 
 ## Structure
 
