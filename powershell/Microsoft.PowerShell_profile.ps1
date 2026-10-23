@@ -1,6 +1,4 @@
-winfetch
-
-oh-my-posh init pwsh --config ~/dekxi.omp.json | Invoke-Expression
+oh-my-posh init pwsh --config "$HOME\.config\oh-my-posh\dekxi.omp.json" | Invoke-Expression
 
 
 
