@@ -35,6 +35,14 @@ $packages = @(
     @{
         Name = "Oh My Posh"
         Id   = "JanDeDobbeleer.OhMyPosh"
+    },
+    @{
+        Name = "GlazeWM"
+        Id   = "glzr-io.glazewm"
+    },
+    @{
+        Name = "YASB"
+        Id   = "AmN.yasb"
     }
 )
 
@@ -67,6 +75,26 @@ foreach ($package in $packages) {
     }
 
     Write-Host "  ✓ Installed" -ForegroundColor Green
+}
+
+# --------------------------------------------------
+# Winfetch (not in winget; installed from PowerShell Gallery)
+# --------------------------------------------------
+
+Write-Host "Checking Winfetch..." -ForegroundColor Yellow
+
+if (Get-Command winfetch -ErrorAction SilentlyContinue) {
+    Write-Host "  $([char]0x2713) Already installed" -ForegroundColor Green
+}
+elseif ($DryRun) {
+    Write-Host "  [DRY RUN] Would run: Install-Script winfetch" -ForegroundColor DarkYellow
+}
+else {
+    Write-Host "  Installing..." -ForegroundColor Cyan
+
+    Install-Script -Name winfetch -Scope CurrentUser -Force
+
+    Write-Host "  $([char]0x2713) Installed (restart the terminal so it is on PATH)" -ForegroundColor Green
 }
 
 Write-Host ""

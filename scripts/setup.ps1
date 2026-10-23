@@ -106,8 +106,7 @@ function Deploy-File {
 $OhMyPoshSource = Join-Path $RepoRoot "oh-my-posh\dekxi.omp.json"
 $WinfetchSource = Join-Path $RepoRoot "winfetch\config.ps1"
 
-$KomorebiSource = Join-Path $RepoRoot "komorebi\komorebi.json"
-$WhkdSource     = Join-Path $RepoRoot "komorebi\whkdrc"
+$GlazeWmSource = Join-Path $RepoRoot "glazewm\config.yaml"
 
 $YasbConfigSource = Join-Path $RepoRoot "yasb\config.yaml"
 $YasbStyleSource  = Join-Path $RepoRoot "yasb\styles.css"
@@ -121,8 +120,7 @@ $PowerShellSource = Join-Path $RepoRoot "powershell\Microsoft.PowerShell_profile
 $OhMyPoshDestination = Join-Path $HOME ".config\oh-my-posh\dekxi.omp.json"
 $WinfetchDestination = Join-Path $HOME ".config\winfetch\config.ps1"
 
-$KomorebiDestination = Join-Path $HOME ".config\komorebi\komorebi.json"
-$WhkdDestination     = Join-Path $HOME ".config\whkd\whkdrc"
+$GlazeWmDestination = Join-Path $HOME ".glzr\glazewm\config.yaml"
 
 $YasbDirectory = Join-Path $HOME ".config\yasb"
 
@@ -143,12 +141,13 @@ Write-Host "Winfetch" -ForegroundColor Cyan
 Deploy-File $WinfetchSource $WinfetchDestination
 
 Write-Host ""
-Write-Host "Komorebi" -ForegroundColor Cyan
-Deploy-File $KomorebiSource $KomorebiDestination
-
-Write-Host ""
-Write-Host "WHKD" -ForegroundColor Cyan
-Deploy-File $WhkdSource $WhkdDestination
+Write-Host "GlazeWM" -ForegroundColor Cyan
+if (Test-Path $GlazeWmSource) {
+    Deploy-File $GlazeWmSource $GlazeWmDestination
+}
+else {
+    Write-Host "  - No glazewm\config.yaml in the repository, skipping" -ForegroundColor DarkYellow
+}
 
 Write-Host ""
 Write-Host "YASB" -ForegroundColor Cyan
