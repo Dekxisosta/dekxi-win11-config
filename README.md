@@ -3,8 +3,7 @@
 [![Windows 11](https://img.shields.io/badge/OS-Windows%2011-0078D4?logo=windows&logoColor=white)](https://www.microsoft.com/windows/windows-11)
 [![PowerShell](https://img.shields.io/badge/PowerShell-7-5391FE?logo=powershell&logoColor=white)](https://github.com/PowerShell/PowerShell)
 [![Git](https://img.shields.io/badge/Git-required-F05032?logo=git&logoColor=white)](https://git-scm.com/)
-[![Komorebi](https://img.shields.io/badge/Komorebi-tiling%20wm-2C2C54)](https://github.com/LGUG2Z/komorebi)
-[![WHKD](https://img.shields.io/badge/WHKD-hotkeys-6C5CE7)](https://github.com/LGUG2Z/whkd)
+[![GlazeWM](https://img.shields.io/badge/GlazeWM-tiling%20wm-2C2C54)](https://github.com/glzr-io/glazewm)
 [![Oh My Posh](https://img.shields.io/badge/Oh%20My%20Posh-prompt-F7B93E)](https://ohmyposh.dev/)
 [![Winfetch](https://img.shields.io/badge/Winfetch-sysinfo-00B4D8)](https://github.com/kiedtl/winfetch)
 [![YASB](https://img.shields.io/badge/YASB-status%20bar-E84393)](https://github.com/amnweb/yasb)
@@ -30,29 +29,36 @@ Built to make setting up a fresh Windows installation faster, reproducible, and 
 - **PowerShell** — profile, aliases, functions, and startup configuration
 - **Oh My Posh** — custom `dekxi` prompt
 - **Winfetch** — system information configuration
-- **Komorebi** — tiling window manager configuration
-- **WHKD** — keyboard shortcuts for Komorebi
+- **GlazeWM** — tiling window manager (workspaces shown in YASB)
 - **YASB** — status bar configuration and styling
+- **Windhawk** — mods and themes for the taskbar, Start menu, File Explorer, and more ([setup notes](windhawk/README.md))
 - **WinUtil** — Chris Titus Tech's Windows Utility, used for debloating and system tweaks
 - **Scripts** — installation, configuration deployment, and verification
 
 ## Wallpapers
 
 [2026-09-09 | Miku Blue Ocean Wallpaper - Alphacoders](https://wall.alphacoders.com/big.php?i=731812)
+[2026-10-23 | Rosuuri Serenity Showcase - Instagram](https://www.instagram.com/p/Daf9NJMjcDM/?img_index=4)
 
 ## Structure
 
 ```text
 dekxi-win11-config/
-├── komorebi/
-│   ├── komorebi.json
-│   └── whkdrc
+├── betterdiscord/
+│   ├── custom.css
+│   └── theme.css
+├── glazewm/
+│   └── config.yaml        (optional, deployed if present)
 ├── oh-my-posh/
 │   └── dekxi.omp.json
 ├── powershell/
 │   └── Microsoft.PowerShell_profile.ps1
+├── spicetify/
+│   └── .gitkeep
 ├── winfetch/
 │   └── config.ps1
+├── windhawk/
+│   └── README.md
 ├── yasb/
 │   ├── config.yaml
 │   └── styles.css
@@ -61,6 +67,7 @@ dekxi-win11-config/
     ├── setup.ps1
     └── test.ps1
 ```
+
 
 ## Migration
 
